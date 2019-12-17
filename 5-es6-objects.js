@@ -30,8 +30,9 @@ const product = {
 // console.log(price);
 // console.log(salePrice);
 
-const transaction = (type, { label, price, stock }) => {
-  console.log(label, price, stock);
+const transaction = (type, { label, price, stock = 0 } = {}) => {
+  console.log(type, label, price, stock);
 };
 
 transaction('order', product);
+transaction('order');
